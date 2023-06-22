@@ -3,16 +3,7 @@
 
 name: Build without Release
 
-on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Build without Release'
-        required: true
-        default: 'Build'
-      home:
-        description: 'location'
-        required: false
+on: [ push, pull_request ]
 
 jobs:
   build:
